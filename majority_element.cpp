@@ -1,3 +1,5 @@
+// Approach 1 -initial attemp
+
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
@@ -21,5 +23,21 @@ public:
         
         return 0;
         
+    }
+};
+
+
+
+//best sol
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        
+        int n = nums.size();
+        
+        sort(nums.begin(), nums.end());
+        
+        return nums[n/2];
     }
 };
