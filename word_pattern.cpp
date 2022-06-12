@@ -49,3 +49,43 @@ public:
         
     }
 };
+
+
+// Approach 2......................................................
+
+class Solution {
+public:
+    bool wordPattern(string pattern, string s) {
+     
+     unordered_map<char, string>   mp;
+        unordered_set<string> st;
+        int set_count=0;
+        
+        int j=0;
+        int len = pattern.length();
+        string str = "";
+     
+     for(int i=0; i<s.length(); i++){
+         if(s[i] == ' ' || i == s.length() -1){
+             
+             if(i == s.length()-1) str+=s[i];
+             
+             if(mp.count(pattern[j]) > 0){
+                 if(mp[pattern[j]] != str) return false;
+             }else{
+                 mp[pattern[j]] = str;
+                 st.insert(str);
+                 set_count++;
+                 if(set_count!=st.size()) return false;
+             }
+             j++;
+             str = "";
+         }else{
+             str+=s[i];
+         }
+     }
+        if(j==len) return true;
+        return false;
+     
+    }
+};
