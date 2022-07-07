@@ -22,13 +22,9 @@ public:
     
     q.push(node);    
     
-    int index=-1;
-    
     
     while(!q.empty()){
         int len = q.size();
-        
-        index++;
         
         vector<int>arr;
         
@@ -51,7 +47,5 @@ public:
     return sol;
         
          }
-    
-    
     
 };
