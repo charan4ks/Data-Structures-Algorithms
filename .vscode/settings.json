@@ -1,6 +1,12 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "list": "cpp"
+        "list": "cpp",
+        "vector": "cpp",
+        "xlocale": "cpp",
+        "xstring": "cpp",
+        "unordered_map": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp"
     }
 }
